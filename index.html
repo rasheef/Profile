@@ -9,123 +9,236 @@
 
 <style>
 
-* {
-    box-sizing: border-box;
+*{
+box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f6f8;
-    color: #333;
-}
-
-
-header {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
+body{
+margin:0;
+font-family:"Inter","Segoe UI",Arial,sans-serif;
+background:#f5f7fb;
+color:#273444;
+line-height:1.6;
 }
 
 
-header h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-}
+header{
 
-
-header h2 {
-    font-weight: normal;
-}
-
-
-header p {
-    font-size: 18px;
-}
-
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-
-.card {
-
-    background: white;
-    margin: 25px 0;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+background:linear-gradient(135deg,#071e33,#123b5d,#1b6ca8);
+color:white;
+padding:90px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
 
 }
 
 
-h2 {
+.hero h1{
 
-    color: #203a43;
+font-size:52px;
+margin:0;
 
 }
 
 
-.skills span {
+.hero h2{
 
-    display: inline-block;
-    background: #203a43;
-    color: white;
-    padding: 8px 16px;
-    margin: 5px;
-    border-radius: 20px;
+font-weight:400;
+font-size:26px;
+
+}
+
+
+.hero p{
+
+font-size:20px;
+max-width:700px;
 
 }
 
 
 
-.project {
+.profile{
 
-    border-left: 5px solid #203a43;
-    padding-left: 15px;
-    margin: 20px 0;
-
-}
-
-
-
-.timeline {
-
-    border-left: 4px solid #203a43;
-    padding-left: 20px;
-
-}
-
-
-.timeline div {
-
-    margin-bottom: 20px;
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
 
 }
 
 
 
-.contact a {
+.container{
 
-    color: #203a43;
-    text-decoration: none;
+max-width:1200px;
+margin:auto;
+padding:40px 25px;
+
+}
+
+
+
+.card{
+
+background:white;
+padding:35px;
+margin-bottom:30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 }
 
 
-footer {
+.section-title{
 
-    background: #203a43;
-    color: white;
-    text-align: center;
-    padding: 20px;
+font-size:32px;
+color:#123b5d;
+margin-bottom:25px;
 
 }
 
+
+
+.skills{
+
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+
+}
+
+
+.skill{
+
+background:#e8f2fb;
+color:#123b5d;
+padding:10px 18px;
+border-radius:25px;
+font-weight:600;
+
+}
+
+
+
+.timeline{
+
+border-left:4px solid #1b6ca8;
+padding-left:30px;
+
+}
+
+
+.job{
+
+margin-bottom:40px;
+position:relative;
+
+}
+
+
+.job:before{
+
+content:"";
+width:15px;
+height:15px;
+background:#1b6ca8;
+border-radius:50%;
+position:absolute;
+left:-39px;
+top:8px;
+
+}
+
+
+.job h3{
+
+margin-bottom:5px;
+color:#123b5d;
+
+}
+
+
+.company{
+
+font-weight:bold;
+font-size:18px;
+
+}
+
+
+.duration{
+
+color:#777;
+
+}
+
+
+
+ul{
+
+padding-left:20px;
+
+}
+
+
+.highlight{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+
+
+.box{
+
+background:#f8fafc;
+padding:20px;
+border-radius:12px;
+
+}
+
+
+
+footer{
+
+text-align:center;
+background:#071e33;
+color:white;
+padding:25px;
+
+}
+
+
+
+@media(max-width:800px){
+
+header{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.profile{
+
+width:160px;
+height:160px;
+
+}
+
+}
 
 </style>
 
@@ -137,13 +250,27 @@ footer {
 
 <header>
 
-<h1>RASHEEF KARAKKATTAYIL</h1>
 
-<h2>Electronics & Automation Engineer</h2>
+<div class="hero">
+
+<h1>Rasheef K</h1>
+
+<h2>Sr Electronics Engineer</h2>
 
 <p>
-Embedded Systems | IoT | Home Automation | PCB Development
+Electronics Design | Embedded Systems | IoT | Home Automation | ELV Solutions
 </p>
+
+<p>
+13+ years of experience designing, deploying and supporting
+electronics, automation and security technology solutions.
+</p>
+
+</div>
+
+
+<img src="images/rasheef.jpg" class="profile">
+
 
 </header>
 
@@ -155,16 +282,20 @@ Embedded Systems | IoT | Home Automation | PCB Development
 
 <div class="card">
 
-<h2>About Me</h2>
+<h2 class="section-title">Professional Summary</h2>
 
 <p>
-I am an Electronics & Automation Engineer with 13+ years of experience
-in designing, developing and deploying automation solutions.
+Electronics and Automation Engineer specializing in embedded systems,
+IoT devices, PCB development, smart automation solutions and ELV systems.
+Experienced in leading projects from concept development to installation,
+testing and customer deployment.
 </p>
 
 <p>
-My experience includes embedded firmware development, PCB assembly,
-hardware testing, IoT systems, networking, and smart home automation.
+Skilled in electronics hardware, firmware development, database integration,
+technical documentation, project coordination and field implementation.
+Passionate about building reliable technology solutions that combine
+hardware and software.
 </p>
 
 </div>
@@ -174,23 +305,25 @@ hardware testing, IoT systems, networking, and smart home automation.
 
 <div class="card">
 
-<h2>Technical Skills</h2>
+<h2 class="section-title">Technical Expertise</h2>
+
 
 <div class="skills">
 
-<span>ESP32</span>
-<span>ESP8266</span>
-<span>Arduino</span>
-<span>Embedded C/C++</span>
-<span>Python</span>
-<span>Linux</span>
-<span>Raspberry Pi</span>
-<span>FastAPI</span>
-<span>SQLite</span>
-<span>PCB Design</span>
-<span>IoT</span>
-<span>Home Automation</span>
-<span>Networking</span>
+<div class="skill">Embedded C/C++</div>
+<div class="skill">ESP32</div>
+<div class="skill">ESP8266</div>
+<div class="skill">Arduino</div>
+<div class="skill">PCB Design</div>
+<div class="skill">IoT Systems</div>
+<div class="skill">Linux Embedded</div>
+<div class="skill">Raspberry Pi</div>
+<div class="skill">Python</div>
+<div class="skill">FastAPI</div>
+<div class="skill">SQLite</div>
+<div class="skill">Home Automation</div>
+<div class="skill">IP Networking</div>
+<div class="skill">ELV Systems</div>
 
 </div>
 
@@ -201,115 +334,193 @@ hardware testing, IoT systems, networking, and smart home automation.
 
 <div class="card">
 
-<h2>Professional Experience</h2>
+<h2 class="section-title">Professional Experience</h2>
 
 
 <div class="timeline">
 
 
-<div>
 
-<h3>Electronics & Automation Engineer</h3>
+<div class="job">
+
+<h3>Sr Electronics Engineer</h3>
+
+<div class="company">
+ClaySys Lifestyle · Full-time
+</div>
+
+<div class="duration">
+May 2021 - Present | Kochi, Kerala, India
+</div>
+
+
+<ul>
+
+<li>Lead electronics and automation projects from concept to successful deployment, ensuring quality and timely delivery.</li>
+
+<li>Design, procure, assemble and test electronic PCBs and automation modules.</li>
+
+<li>Configure embedded controllers, automation devices and database systems.</li>
+
+<li>Develop project documentation, technical reports and client communication.</li>
+
+<li>Supervise installation teams and ensure compliance with engineering standards.</li>
+
+<li>Troubleshoot hardware, software and field integration issues.</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="job">
+
+
+<h3>Project Engineer</h3>
+
+<div class="company">
+Mastrotech Computronics Pvt Ltd
+</div>
+
+
+<div class="duration">
+Dec 2011 - Apr 2021 | Kochi, Kerala, India
+</div>
+
+
+<ul>
+
+<li>Managed ELV and electronic security system projects from estimation to commissioning.</li>
+
+<li>Prepared BOM, technical proposals, project documentation and client coordination.</li>
+
+<li>Designed and implemented CCTV, access control, fire alarm and networking solutions.</li>
+
+<li>Configured IP cameras, PTZ systems, video analytics, DDNS, NTP and SMTP services.</li>
+
+<li>Integrated biometric attendance systems with databases and reporting platforms.</li>
+
+<li>Designed automation circuits, PCBs and Arduino-based control systems.</li>
+
+<li>Created AutoCAD drawings including schematic, shop and as-built drawings.</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="job">
+
+
+<h3>Field Service Technician</h3>
+
+<div class="company">
+Aalok IT & Services
+</div>
+
+
+<div class="duration">
+Apr 2011 - Dec 2011 | Kerala, India
+</div>
+
+
+<ul>
+
+<li>Installed and maintained computer hardware, operating systems and peripherals.</li>
+
+<li>Troubleshot hardware, software and networking problems.</li>
+
+<li>Configured LAN, WAN, WLAN networks, modems and WiFi systems.</li>
+
+<li>Provided technical support and user training.</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h2 class="section-title">Key Project Areas</h2>
+
+
+<div class="highlight">
+
+
+<div class="box">
+
+<h3>Smart Home Automation</h3>
 
 <p>
-Development and deployment of smart home automation systems,
-control modules, sensors, relay controllers and IoT devices.
+Lighting control, appliance automation, sensors,
+embedded controllers and IoT integration.
 </p>
 
 </div>
 
 
 
-<div>
-
-<h3>Hardware Development</h3>
-
-<p>
-PCB testing, component selection, troubleshooting,
-production support and electronics procurement.
-</p>
-
-</div>
-
-
-
-<div>
+<div class="box">
 
 <h3>Embedded Systems</h3>
 
 <p>
-Firmware development using ESP8266, ESP32 and Arduino platforms
-with network communication and device control.
+ESP32/ESP8266 firmware development,
+hardware interfacing and communication protocols.
 </p>
 
 </div>
 
 
-</div>
 
-</div>
+<div class="box">
 
-
-
-
-
-<div class="card">
-
-<h2>Featured Projects</h2>
-
-
-<div class="project">
-
-<h3>Smart Home Automation System</h3>
+<h3>Security Solutions</h3>
 
 <p>
-Apartment automation solution for lighting control,
-appliance management, sensors and smart devices.
+CCTV, access control, biometric systems,
+network infrastructure and ELV deployment.
 </p>
 
 </div>
 
 
 
-<div class="project">
+<div class="box">
 
-<h3>IoT Energy Monitoring System</h3>
+<h3>PCB Development</h3>
 
 <p>
-Voltage and current monitoring using CT sensors,
-microcontrollers and cloud-connected systems.
+Circuit design, component selection,
+assembly testing and troubleshooting.
 </p>
 
 </div>
 
 
-
-
-<div class="project">
-
-<h3>Access Control Automation</h3>
-
-<p>
-Raspberry Pi based access control integration using
-API communication and automation services.
-</p>
-
 </div>
-
-
-
-
-<div class="project">
-
-<h3>Electronics Inventory Tracking System</h3>
-
-<p>
-Web application for electronic component management
-including category, value, package and quantity tracking.
-</p>
-
-</div>
-
 
 
 </div>
@@ -320,35 +531,15 @@ including category, value, package and quantity tracking.
 
 <div class="card">
 
-<h2>Current Learning Focus</h2>
 
-<ul>
+<h2 class="section-title">Contact</h2>
 
-<li>Linux Embedded Firmware Development</li>
-
-<li>Advanced C/C++ Programming</li>
-
-<li>IoT Cloud Architecture</li>
-
-<li>Industrial Automation Systems</li>
-
-<li>Embedded Linux Platforms</li>
-
-</ul>
-
-</div>
-
-
-
-
-
-<div class="card contact">
-
-<h2>Contact</h2>
 
 <p>
-Available for Embedded Systems, IoT and Automation projects.
+Available for Embedded Systems, IoT, Electronics Design
+and Automation Engineering opportunities.
 </p>
+
 
 <p>
 GitHub:
@@ -357,13 +548,13 @@ github.com/rasheef
 </a>
 </p>
 
-</div>
-
-
 
 </div>
 
 
+
+
+</div>
 
 
 <footer>
@@ -371,7 +562,6 @@ github.com/rasheef
 © 2026 Rasheef K | Electronics & Automation Engineer
 
 </footer>
-
 
 
 </body>
